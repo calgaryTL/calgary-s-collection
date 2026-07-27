@@ -80,8 +80,8 @@ function renderHome() {
           </span>
 
           <p>
-            A curated selection of collectibles from other artists who have
-            shaped my musical journey.
+            A curated selection of collectibles from other artists I enjoy listening to.
+
           </p>
         </div>
       </button>
