@@ -80,8 +80,7 @@ function renderHome() {
           </span>
 
           <p>
-            A curated selection of collectibles from other artists I enjoy listening to.
-
+         This archive showcases a curated selection of vinyl records, CDs, and merchandise from other artists I enjoy listening to.
           </p>
         </div>
       </button>

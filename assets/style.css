@@ -224,41 +224,46 @@ img {
 }
 
 .choice-visual {
+  position: relative;
   aspect-ratio: 16 / 9;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
   padding: 28px;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(10, 10, 10, 0.88) 0%,
-      rgba(10, 10, 10, 0.68) 45%,
-      rgba(10, 10, 10, 0.5) 100%
-    ),
-    url("../images/backgrounds/tate-home.jpg");
+}
+
+.choice-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("../images/backgrounds/tate-home.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.choice-card:nth-child(2) .choice-visual {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(10, 10, 10, 0.88) 0%,
-      rgba(10, 10, 10, 0.68) 45%,
-      rgba(10, 10, 10, 0.5) 100%
-    ),
-    url("../images/backgrounds/other-artists.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.choice-card:nth-child(2) .choice-visual::before {
+  background-image: url("../images/backgrounds/other-artists.jpg");
+}
+
+.choice-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg,
+    rgba(10,10,10,.88) 0%,
+    rgba(10,10,10,.68) 45%,
+    rgba(10,10,10,.50) 100%);
 }
 
 .choice-title {
+  position: relative;
+  z-index: 2;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.7rem, 6vw, 5rem);
-  line-height: 0.9;
+  line-height: .9;
 }
 
 .choice-body,
